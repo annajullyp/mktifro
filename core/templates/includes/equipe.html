@@ -10,7 +10,11 @@
       {% for col in colaboradores %}
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 border-0 shadow-sm text-center">
-            <img src="{{ col.foto.url }}" class="card-img-top rounded-circle mx-auto mt-4" style="width:120px;height:120px;object-fit:cover" alt="{{ col.nome }}" />
+            {% if col.foto %}
+              <img src="{{ col.foto.url }}" class="card-img-top rounded-circle mx-auto mt-4"
+                style="width:120px;height:120px;object-fit:cover"
+                alt="{{ col.nome }}" />
+            {% endif %}
             <div class="card-body">
               <h5 class="card-title mb-1">{{ col.nome }}</h5>
               <span class="badge bg-warning text-dark mb-2">{{ col.cargo }}</span>
