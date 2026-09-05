@@ -1,0 +1,13 @@
+# Arquivos compilados
+*.pyc
+
+__pycache__
+
+.venv
+
+.idea
+
+# Arquivos temporários
+*.*~
+
+.env
